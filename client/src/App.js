@@ -48,7 +48,6 @@ function App() {
           <option key={group.groupid} value={group.groupid}>{group.name}</option>
         ))}
       </select>
-      <button type="se">Reset</button>
       <input
         type="text"
         placeholder="Filter hosts..."
@@ -58,7 +57,6 @@ function App() {
       <table>
         <thead>
           <tr>
-            <th>Host Group</th>
             <th>Host Name</th>
             <th>Host Interface</th>
           </tr>
@@ -66,7 +64,6 @@ function App() {
         <tbody>
           {hosts.map(host => (
             <tr key={host.hostid}>
-              <td>{host.group}</td>
               <td>{host.name}</td>
               <td>
                 {host.interfaces && host.interfaces.map(intf => (
