@@ -68,7 +68,11 @@ function App() {
               <td>
                 {host.interfaces && host.interfaces.map(intf => (
                   <div key={intf.interfaceid}>
-                    <a href="#" onClick={() => handleIpClick(intf.ip)}>{intf.ip}</a>
+                    <button
+                      type="button"
+                      className="link-button"
+                      onClick={() => handleIpClick(intf.ip)}>{intf.ip}
+                    </button>
                   </div>
                 ))}
               </td>
